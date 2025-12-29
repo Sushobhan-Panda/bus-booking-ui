@@ -1,0 +1,24 @@
+<div class="hero">
+  <div class="search-box">
+    <mat-form-field appearance="outline">
+      <mat-label>From</mat-label>
+      <input matInput [(ngModel)]="from">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>To</mat-label>
+      <input matInput [(ngModel)]="to">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="journeyDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="search()">
+      Search Buses
+    </button>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.hero {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #d32f2f, #ff5252);
+}
+
+.search-box {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  width: 90%;
+  max-width: 900px;
+}
