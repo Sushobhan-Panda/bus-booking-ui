@@ -1,18 +1,52 @@
 .hero {
-  min-height: 80vh;
+  height: 85vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url('/assets/bus-bg.jpg') center / cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #d32f2f, #ff5252);
+  justify-content: center;
 }
 
-.search-box {
-  background: #fff;
+.overlay {
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+p {
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.search-card {
+  background: white;
   padding: 24px;
   border-radius: 12px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  width: 90%;
-  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.search-card input {
+  padding: 12px;
+}
+
+@media (max-width: 768px) {
+  .search-card {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
 }

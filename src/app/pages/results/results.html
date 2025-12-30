@@ -1,28 +1,28 @@
-<div class="results" *ngIf="!loading && buses.length > 0">
+<div class="results-container">
+
   <div class="bus-card" *ngFor="let bus of buses">
 
-    <div>
+    <div class="left">
       <h3>{{ bus.operator }}</h3>
-      <p>Bus No: {{ bus.busNumber }}</p>
+      <span class="bus-no">Bus No: {{ bus.busNumber }}</span>
     </div>
 
-    <div>
-      <strong>{{ bus.departureTime }} → {{ bus.arrivalTime }}</strong>
-      <div>{{ bus.duration }}</div>
+    <div class="middle">
+      <div class="time">
+        <strong>{{ bus.departureTime }}</strong>
+        <span>→</span>
+        <strong>{{ bus.arrivalTime }}</strong>
+      </div>
+      <span class="route">{{ bus.departureTime }} → {{ bus.arrivalTime }}</span>
     </div>
 
-    <div class="action">
+    <div class="right">
       <div class="price">₹{{ bus.price }}</div>
-      <div>{{ bus.availableSeats }} seats</div>
-
-      <button mat-stroked-button color="primary">
+      <button mat-raised-button color="primary">
         View Seats
       </button>
     </div>
 
   </div>
-</div>
 
-<div *ngIf="!loading && buses.length === 0" class="loading">
-  No buses found.
 </div>

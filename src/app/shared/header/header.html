@@ -1,14 +1,9 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="header">
   <span class="logo">TrackMyBus</span>
+
   <span class="spacer"></span>
 
-  <button mat-button [matMenuTriggerFor]="menu">
-    <mat-icon>account_circle</mat-icon>
-    Account
+  <button mat-stroked-button color="primary">
+    Login
   </button>
-
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Login</button>
-    <button mat-menu-item>Sign Up</button>
-  </mat-menu>
 </mat-toolbar>
